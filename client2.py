@@ -72,7 +72,7 @@ ladderPoint = [
 
 
 def welcome_msg():
-#function  to welcome user to the program
+#function to welcome user to the program
     msg = """
     Welcome to Snake and Ladder Game.
    Rules:
@@ -97,17 +97,17 @@ def UserDiceValue():
     print("Its a " + str(diceValue))
     return diceValue
 
-# message when user go down by the snake bite
+# message when player go down by the snake bite
 def got_snake_bite(old_value, current_value, player_name):
     print("\n" + random.choice(snakeBite).upper() + " ~~~~~~~~>")
     print("\n" + player_name + " got a snake bite. Down from " + str(old_value)+ " to " + str(current_value))
     
-# message when user go climbed by the ladder
+# message when player go climbed by the ladder
 def got_ladder_jump(old_value, current_value, player_name):
     print("\n" + random.choice(ladderPoint).upper() + " ########")
     print("\n" + player_name + " climbed the ladder from " + str(old_value) + " to " + str(current_value))
 
-
+# function for player moving position 
 def snake_ladder(player_name, current_value, diceValue):
     time.sleep(WAIT)
     old_value = current_value
