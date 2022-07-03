@@ -132,7 +132,8 @@ def snake_ladder(player_name, current_value, diceValue):
 
     return final_value
 
-
+# messages when the player win the games
+# request if player want to play the game
 def check_win(player_name, position):
     time.sleep(WAIT)
     if MAX_VAL == position:
