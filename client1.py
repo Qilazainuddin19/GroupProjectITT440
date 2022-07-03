@@ -97,18 +97,17 @@ def UserDiceValue():
     print("Its a " + str(diceValue))
     return diceValue
 
-
+# message when player go down by the snake bite
 def got_snake_bite(old_value, current_value, player_name):
     print("\n" + random.choice(snakeBite).upper() + " ~~~~~~~~>")
     print("\n" + player_name + " got a snake bite. Down from " + str(old_value)+ " to " + str(current_value))
-
+    
+# message when player go climbed by the ladder
 def got_ladder_jump(old_value, current_value, player_name):
     print("\n" + random.choice(ladderPoint).upper() + " ########")
     print("\n" + player_name + " climbed the ladder from " + str(old_value) + " to " + str(current_value))
 
-
-
-
+# function for player moving position
 def snake_ladder(player_name, current_value, diceValue):
     time.sleep(WAIT)
     old_value = current_value
@@ -132,7 +131,8 @@ def snake_ladder(player_name, current_value, diceValue):
 
     return final_value
 
-
+# messages when the player win the games
+# request if player want to play the game
 def check_win(player_name, position):
     time.sleep(WAIT)
     if MAX_VAL == position:
