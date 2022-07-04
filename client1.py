@@ -113,6 +113,7 @@ def snake_ladder(player_name, current_value, diceValue):
     old_value = current_value
     current_value = current_value + diceValue
 
+    # server send message to client  
     if current_value > MAX_VAL:
         print("You need " + str(MAX_VAL - old_value) + " to win this game. Keep trying,OKAY !" )
         return old_value
