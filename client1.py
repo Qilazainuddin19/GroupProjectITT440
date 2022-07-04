@@ -123,7 +123,7 @@ def snake_ladder(player_name, current_value, diceValue):
         final_value = snakes.get(current_value)
         got_snake_bite(current_value, final_value, player_name)
 
-    elif current_value in ladders:
+    else if current_value in ladders:
         final_value = ladders.get(current_value)
         got_ladder_jump(current_value, final_value, player_name)
 
